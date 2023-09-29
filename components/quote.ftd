@@ -37,6 +37,7 @@ string person-name:
 string person-description:
 optional string background-color:
 optional integer width:
+optional string color:
 ftd.type-data types: $roboto-mono-typography.types
 
 
@@ -64,10 +65,11 @@ opacity: 0.1
 
 ;; Quote title
 -- ftd.text: $wrapper.title
-color: #eeeeee
 role: $inherited.types.copy-regular
 ;; width.fixed.px if { wrapper.width != NULL }: $wrapper.width
 ;; width.fixed.px: 600
+color if { wrapper.color != NULL }: $wrapper.color
+color: #eeeeee
 width.fixed: $res
 z-index: 1
 style: italic
@@ -84,6 +86,7 @@ margin-top.px: 40
 anchor.id: quote-icon-with-avatar
 left.px: -20
 src: $assets.files.assets.images.quote_icon.svg
+background.solid if { wrapper.background-color != NULL }: $wrapper.background-color
 background.solid: #1d222a
 border-radius.px: 10
 
@@ -103,6 +106,7 @@ margin-left.px: 40
 
 ;; Quote person name
 -- ftd.text: $wrapper.person-name
+color if { wrapper.color != NULL }: $wrapper.color
 color: #eeeeee
 style: bold
 role: $inherited.types.heading-small
@@ -110,6 +114,7 @@ role: $inherited.types.heading-small
 ;; Quote person description
 -- ftd.text: $wrapper.person-description
 margin-top.px: 5
+color if { wrapper.color != NULL }: $wrapper.color
 color: #eeeeee
 style: italic
 role: $inherited.types.copy-regular
