@@ -1,0 +1,49 @@
+;; -- import: fifthtry.github.io/doc-site as ds
+;; -- import: fastn-community.github.io/winter-cs
+;; -- import: fastn-community.github.io/roboto-mono-typography
+;; -- import: ayushsoni1010.github.io/button-component-challenge/components/button as button
+-- import: apneduniya.github.io/quote-fastn/components/quote as quote
+
+
+;;  M A I N   P A G E 
+
+-- ftd.row:
+id: main-page
+align-content: center
+height: fill-container
+;; height.fixed.percent: 100
+width: fill-container
+;; background.solid: #222831
+
+;; Background image of main page
+-- ftd.image:
+fit: cover
+;; sticky: true
+;; src: https://w0.peakpx.com/wallpaper/228/775/HD-wallpaper-starry-sky-glow-art-dark-lake-reflection.jpg
+src: $assets.files.assets.images.bg.png
+;; blur.px: 10
+;; anchor.id: main-page
+anchor: window
+top.px: 0
+left.px: 0
+height: fill-container
+;; width: fill-container
+
+-- ftd.column:
+align-self: center
+
+-- quote.wrapper:
+;; title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+;; Write 5-10 lines of quote here related to coding
+title: "Coding is the art of turning ideas into reality. It's a craft that requires patience, persistence, and a willingness to learn. With each line of code, we have the power to create something new, something that can change the world. But with that power comes great responsibility. We must strive to write code that is efficient, secure, and accessible to all. And we must never forget that behind every line of code is a human being, with hopes, dreams, and a desire to make a difference."
+avatar-src: https://avatars.githubusercontent.com/u/113763427
+person-name: Adarsh Gupta
+person-description: Full Stack Developer
+background-color: #1d222a
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+;;  E N D   M A I N   P A G E
+

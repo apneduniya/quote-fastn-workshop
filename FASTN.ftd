@@ -1,0 +1,20 @@
+-- import: fastn
+
+-- fastn.package: apneduniya.github.io/quote-fastn
+favicon: /-/apneduniya.github.io/quote-fastn//assets/images/quote_icon.svg
+
+-- fastn.dependency: fastn-community.github.io/doc-site as doc-site
+-- fastn.dependency: fastn-community.github.io/footer
+-- fastn.dependency: fastn-community.github.io/roboto-typography
+;; -- fastn.dependency: ayushsoni1010.github.io/button-component-challenge
+
+-- fastn.dependency: fastn-community.github.io/roboto-mono-typography
+
+-- fastn.auto-import: apneduniya.github.io/quote-fastn/FASTN/ds
+-- fastn.auto-import: apneduniya.github.io/quote-fastn/assets
+-- fastn.auto-import: doc-site
+;; -- fastn.auto-import: apneduniya.github.io/quote-fastn/components/quote
+
+-- fastn.sitemap:
+
+# Home: index.html
