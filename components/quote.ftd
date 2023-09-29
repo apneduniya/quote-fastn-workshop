@@ -1,0 +1,143 @@
+-- import: fastn-community.github.io/roboto-mono-typography
+
+;;  L I N E A R  G R A D I E N T S
+
+;; -- ftd.linear-gradient bg: 
+;; direction: top-bottom 
+;; colors: $color-values 
+
+;; E N D   L I N E A R  G R A D I E N T S
+
+
+
+;;  S H A D O W S
+
+-- ftd.shadow wrapper-shadow: 
+color: rgba(0, 0, 0, 0.35)
+x-offset.px: 0 
+y-offset.px: 5 
+blur.px: 15
+
+;; E N D   S H A D O W S
+
+
+
+-- ftd.length.responsive res:
+mobile.px: 220
+desktop.px: 600
+
+
+
+;;  Q U O T E   C O M P O N E N T 
+
+-- component wrapper:
+caption title:
+string avatar-src:
+string person-name:
+string person-description:
+optional string background-color:
+optional integer width:
+ftd.type-data types: $roboto-mono-typography.types
+
+
+
+;; Main quote container
+-- ftd.column:
+id: quote
+background.solid if { wrapper.background-color != NULL }: $wrapper.background-color
+background.solid: #1d222a
+border-radius.px: 10
+padding.px: 40
+overflow: hidden
+shadow: $wrapper-shadow
+
+;; Background quote image
+-- ftd.image:
+src: $assets.files.assets.images.quote_bg.svg
+anchor.id: quote
+height.fixed.px: 220
+width.fixed.px: 220
+top.calc: 100% - 80%
+left.calc: 100% - 68%
+z-index: 0
+opacity: 0.1
+
+;; Quote title
+-- ftd.text: $wrapper.title
+color: #eeeeee
+role: $inherited.types.copy-regular
+;; width.fixed.px if { wrapper.width != NULL }: $wrapper.width
+;; width.fixed.px: 600
+width.fixed: $res
+z-index: 1
+style: italic
+
+;; Quote person container
+-- ftd.row:
+
+;; Quote icon with avatar
+-- ftd.row:
+id: quote-icon-with-avatar
+margin-top.px: 40
+
+-- ftd.image:
+anchor.id: quote-icon-with-avatar
+left.px: -20
+src: $assets.files.assets.images.quote_icon.svg
+background.solid: #1d222a
+border-radius.px: 10
+
+-- ftd.image:
+src: $wrapper.avatar-src
+height.fixed.px: 100
+width.fixed.px: 100
+border-radius.percent: 100
+
+-- end: ftd.row
+;; end of Quote icon with avatar
+
+;; Quote person name and description
+-- ftd.column:
+margin-top.px: 60
+margin-left.px: 40
+
+;; Quote person name
+-- ftd.text: $wrapper.person-name
+color: #eeeeee
+style: bold
+role: $inherited.types.heading-small
+
+;; Quote person description
+-- ftd.text: $wrapper.person-description
+margin-top.px: 5
+color: #eeeeee
+style: italic
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+;; end of Quote person name and description
+
+;; Dots image
+-- ftd.image:
+src: $assets.files.assets.images.dots.png
+anchor.id: quote
+height.fixed.px: 140
+width.fixed.px: 140
+bottom.px: -47
+right.px: -47
+
+;; -- button.tertiary:
+;; title: View my work
+;; size: small
+;; isNewTab: true
+;; link: https://github.com/apneduniya
+
+-- end: ftd.row
+;; end of Quote person container
+
+-- end: ftd.column
+;; end of Main quote container
+
+-- end: wrapper
+
+;;  E N D   Q U O T E   C O M P O N E N T
