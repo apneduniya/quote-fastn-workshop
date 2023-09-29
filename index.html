@@ -1226,6 +1226,7 @@ try {
 let __args__ = {
 background_color: null,
 width: null,
+color: null,
 types: global.fastn_community_github_io_roboto_mono_typography__types,
 };
 inherited = fastn_utils.getInheritedValues(__args__, inherited, args);
@@ -1268,10 +1269,22 @@ let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
 rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.title, inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.Fixed(global.apneduniya_github_io_quote_fastn_components_quote__res), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.ZIndex, 1, inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.Color, fastn.recordInstance({
+rooti0.setProperty(fastn_dom.PropertyKind.Color, fastn.formula([__args__.color], function () {
+if (function () {
+return (fastn_utils.getter(__args__.color) !== null);
+}()) {
+return fastn.recordInstance({
+dark: __args__.color,
+light: __args__.color
+});
+} else {
+return fastn.recordInstance({
 dark: "#eeeeee",
 light: "#eeeeee"
-}), inherited);
+});
+}
+}
+), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.TextStyle, fastn.mutableList([fastn_dom.TextStyle.Italic]), inherited);
 },
@@ -1287,10 +1300,22 @@ rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.apneduniya_github_io_
 rooti0.setProperty(fastn_dom.PropertyKind.Anchor, fastn_dom.Anchor.Id("quote-icon-with-avatar"), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.BorderRadius, fastn_dom.Length.Px(10), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.Left, fastn_dom.Length.Px( - 20), inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.Background, fastn_dom.BackgroundStyle.Solid(fastn.recordInstance({
+rooti0.setProperty(fastn_dom.PropertyKind.Background, fastn.formula([__args__.background_color], function () {
+if (function () {
+return (fastn_utils.getter(__args__.background_color) !== null);
+}()) {
+return fastn_dom.BackgroundStyle.Solid(fastn.recordInstance({
+dark: __args__.background_color,
+light: __args__.background_color
+}));
+} else {
+return fastn_dom.BackgroundStyle.Solid(fastn.recordInstance({
 dark: "#1d222a",
 light: "#1d222a"
-})), inherited);
+}));
+}
+}
+), inherited);
 },
 function (root, inherited) {
 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
@@ -1311,10 +1336,22 @@ rooti0.setProperty(fastn_dom.PropertyKind.MarginTop, fastn_dom.Length.Px(60), in
 rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
 rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.person_name, inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.Color, fastn.recordInstance({
+rooti0.setProperty(fastn_dom.PropertyKind.Color, fastn.formula([__args__.color], function () {
+if (function () {
+return (fastn_utils.getter(__args__.color) !== null);
+}()) {
+return fastn.recordInstance({
+dark: __args__.color,
+light: __args__.color
+});
+} else {
+return fastn.recordInstance({
 dark: "#eeeeee",
 light: "#eeeeee"
-}), inherited);
+});
+}
+}
+), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_small"), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.TextStyle, fastn.mutableList([fastn_dom.TextStyle.Bold]), inherited);
 },
@@ -1322,10 +1359,22 @@ function (root, inherited) {
 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
 rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.person_description, inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.MarginTop, fastn_dom.Length.Px(5), inherited);
-rooti0.setProperty(fastn_dom.PropertyKind.Color, fastn.recordInstance({
+rooti0.setProperty(fastn_dom.PropertyKind.Color, fastn.formula([__args__.color], function () {
+if (function () {
+return (fastn_utils.getter(__args__.color) !== null);
+}()) {
+return fastn.recordInstance({
+dark: __args__.color,
+light: __args__.color
+});
+} else {
+return fastn.recordInstance({
 dark: "#eeeeee",
 light: "#eeeeee"
-}), inherited);
+});
+}
+}
+), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
 rooti0.setProperty(fastn_dom.PropertyKind.TextStyle, fastn.mutableList([fastn_dom.TextStyle.Italic]), inherited);
 }
